@@ -1,0 +1,105 @@
+@font-face {
+  font-family: Pixeltype;
+  src: url("/fonts/Pixeltype.ttf");
+}
+
+@font-face {
+  font-family: PixelBit-Free;
+  src: url("/fonts/PixelBit-Free.ttf");
+}
+
+@font-face {
+  font-family: Pixellari;
+  src: url("/fonts/Pixellari.ttf");
+}
+
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  user-select: none;
+  font-family: Pixeltype;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  font-family: PixelBit-Free;
+  margin: 0;
+  text-shadow: 2px 2px red;
+}
+
+.world-container {
+  position: relative;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 700px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.world {
+  margin: 0;
+  position: relative;
+  image-rendering: pixelated;
+  transform: scale(0.55);
+  min-width: 1200px;
+  max-width: 1200px;
+  min-height: 500px;
+  max-height: 500px;
+  background-color: orange;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.score {
+  position: absolute;
+  font-size: 50px;
+  right: 1vmin;
+  top: 1vmin;
+}
+
+.start-screen {
+  position: absolute;
+  font-size: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hide {
+  display: none;
+}
+
+.ground {
+  --left: 0;
+  position: absolute;
+  width: 500%;
+  bottom: 0;
+  left: calc(var(--left) * 1%)
+}
+
+.character {
+  --bottom: 0;
+  position: absolute;
+  left: 1%;
+  height: 30%;
+  bottom: calc(var(--bottom) * 1%);
+  height: 100px;
+}
+
+.obstacle {
+  position: absolute;
+  left: calc(var(--left) * 1%);
+  height: 30%;
+  bottom: 0;
+  height: 60px;
+}
