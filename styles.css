@@ -48,6 +48,7 @@ h1 {
 .world {
   margin: 0;
   position: relative;
+  bottom: 30px;
   image-rendering: pixelated;
   transform: scale(0.55);
   min-width: 1200px;
